@@ -1,20 +1,22 @@
 // Sample project data
 const projects = [
-    { name: "PixelPeak", description: "YouTube Management Agency" },
-    { name: "Hacktoberfest Contributions", description: "Open source projects" },
-    { name: "Social Media App", description: "Community-based planning tool" },
+    { name: "PixelPeak", description: "YouTube Management Agency for professional creators." },
+    { name: "Hacktoberfest Contributions", description: "Open source projects for global impact." },
+    { name: "Social Media App", description: "A tool for community planning and meetups." },
   ];
   
-  // Function to render projects
+  // Function to render project cards
   const renderProjects = () => {
-    const projectList = document.getElementById("project-list");
+    const projectCards = document.getElementById("project-cards");
+  
     projects.forEach((project) => {
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `
+      const card = document.createElement("div");
+      card.classList.add("project-card");
+      card.innerHTML = `
         <h3>${project.name}</h3>
         <p>${project.description}</p>
       `;
-      projectList.appendChild(listItem);
+      projectCards.appendChild(card);
     });
   };
   
